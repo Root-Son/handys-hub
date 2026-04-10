@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Handys Sales Hub</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 60px 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    header h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #38bdf8, #818cf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      color: #94a3b8;
+      font-size: 0.95rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+      max-width: 960px;
+      width: 100%;
+    }
+
+    .card {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 14px;
+      padding: 24px;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      border-color: #818cf8;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(129, 140, 248, 0.15);
+    }
+
+    .card-icon {
+      font-size: 1.8rem;
+      margin-bottom: 4px;
+    }
+
+    .card-title {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #f1f5f9;
+    }
+
+    .card-desc {
+      font-size: 0.85rem;
+      color: #94a3b8;
+      line-height: 1.5;
+    }
+
+    .card-tag {
+      display: inline-block;
+      margin-top: 4px;
+      padding: 3px 10px;
+      font-size: 0.7rem;
+      border-radius: 999px;
+      background: #334155;
+      color: #94a3b8;
+      width: fit-content;
+    }
+
+    footer {
+      margin-top: 60px;
+      color: #475569;
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 640px) {
+      body { padding: 40px 16px; }
+      header h1 { font-size: 1.8rem; }
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Handys Sales Hub</h1>
+    <p>Sales & Revenue 대시보드 모음</p>
+  </header>
+
+  <div class="grid">
+
+    <a class="card" href="https://m1buff.vercel.app" target="_blank">
+      <div class="card-icon">📊</div>
+      <div class="card-title">M1 버프 현황판</div>
+      <div class="card-desc">주간·월간 매출, ADR, OCC, 채널 분석 운영 대시보드</div>
+      <div class="card-tag">매출 분석</div>
+    </a>
+
+    <a class="card" href="https://bookingpace.vercel.app" target="_blank">
+      <div class="card-icon">🏃</div>
+      <div class="card-title">부킹 페이스</div>
+      <div class="card-desc">전지점 부킹 페이스 & 매출 달성 확률 대시보드</div>
+      <div class="card-tag">예측</div>
+    </a>
+
+    <a class="card" href="https://handys-dynamic-pricing.vercel.app" target="_blank">
+      <div class="card-icon">💰</div>
+      <div class="card-title">다이내믹 프라이싱</div>
+      <div class="card-desc">전지점 가격 추천 시스템 — 픽업 페이스 엔진 기반</div>
+      <div class="card-tag">가격 최적화</div>
+    </a>
+
+    <a class="card" href="https://test-omega-rouge-35.vercel.app" target="_blank">
+      <div class="card-icon">⏱️</div>
+      <div class="card-title">지점별 리드타임</div>
+      <div class="card-desc">지점별 예약 리드타임 분포 분석</div>
+      <div class="card-tag">분석</div>
+    </a>
+
+    <a class="card" href="https://bookingpace.vercel.app/trend" target="_blank">
+      <div class="card-icon">📈</div>
+      <div class="card-title">관광 수요 트렌드</div>
+      <div class="card-desc">검색 트렌드 기반 관광 수요 동향 모니터링</div>
+      <div class="card-tag">트렌드</div>
+    </a>
+
+    <a class="card" href="https://bookingpace.vercel.app/quote" target="_blank">
+      <div class="card-icon">🧮</div>
+      <div class="card-title">견적 계산기</div>
+      <div class="card-desc">하드블럭·소프트블럭, B2B 견적 산출</div>
+      <div class="card-tag">시뮬레이션</div>
+    </a>
+
+    <a class="card" href="https://calendar.sandbox.plott.co.kr/" target="_blank">
+      <div class="card-icon">📅</div>
+      <div class="card-title">스마트 캘린더 V2</div>
+      <div class="card-desc">지점별 일자별 객실 현황 캘린더 뷰</div>
+      <div class="card-tag">운영</div>
+    </a>
+
+    <a class="card" href="https://bookingpace.vercel.app/h2" target="_blank">
+      <div class="card-icon">🔔</div>
+      <div class="card-title">하반기 예약 모니터링</div>
+      <div class="card-desc">7~12월 신규 예약 실시간 모니터링</div>
+      <div class="card-tag">모니터링</div>
+    </a>
+
+  </div>
+
+
+</body>
+</html>
